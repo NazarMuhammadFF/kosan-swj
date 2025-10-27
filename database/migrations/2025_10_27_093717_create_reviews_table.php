@@ -25,7 +25,7 @@ return new class extends Migration
             $table->boolean('is_verified')->default(false); // review dari tenant terverifikasi
             $table->timestamps();
             $table->softDeletes();
-            
+
             $table->index(['property_id', 'is_published']);
             $table->index('tenant_id');
             $table->index(['rating', 'is_published']);

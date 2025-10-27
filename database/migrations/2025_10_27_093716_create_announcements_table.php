@@ -25,7 +25,7 @@ return new class extends Migration
             $table->date('expires_at')->nullable(); // untuk pengumuman yang expire
             $table->timestamps();
             $table->softDeletes();
-            
+
             $table->index(['property_id', 'is_published']);
             $table->index('created_by');
             $table->index(['is_published', 'published_at']);
