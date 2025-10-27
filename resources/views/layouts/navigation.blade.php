@@ -15,6 +15,12 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    
+                    @can('viewAny', App\Models\Property::class)
+                        <x-nav-link :href="route('properties.index')" :active="request()->routeIs('properties.*')">
+                            {{ __('Properties') }}
+                        </x-nav-link>
+                    @endcan
                 </div>
             </div>
 
@@ -70,6 +76,12 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            
+            @can('viewAny', App\Models\Property::class)
+                <x-responsive-nav-link :href="route('properties.index')" :active="request()->routeIs('properties.*')">
+                    {{ __('Properties') }}
+                </x-responsive-nav-link>
+            @endcan
         </div>
 
         <!-- Responsive Settings Options -->
