@@ -22,7 +22,7 @@ class PropertyFactory extends Factory
     public function definition(): array
     {
         $name = $this->faker->company() . ' ' . $this->faker->randomElement(['Kost', 'Kos', 'Boarding House']);
-        
+
         return [
             'owner_id' => User::role('owner')->inRandomOrder()->first()?->id ?? User::factory()->create(),
             'name' => $name,

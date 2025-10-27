@@ -20,77 +20,77 @@ class RolesAndPermissionsSeeder extends Seeder
             'properties.update',
             'properties.delete',
             'properties.publish',
-            
+
             // Room Management
             'rooms.view',
             'rooms.create',
             'rooms.update',
             'rooms.delete',
             'rooms.change_status',
-            
+
             // Tenant Management
             'tenants.view',
             'tenants.create',
             'tenants.update',
             'tenants.delete',
             'tenants.verify',
-            
+
             // Booking Management
             'bookings.view',
             'bookings.create',
             'bookings.confirm',
             'bookings.cancel',
-            
+
             // Contract Management
             'contracts.view',
             'contracts.create',
             'contracts.update',
             'contracts.terminate',
             'contracts.extend',
-            
+
             // Invoice Management
             'invoices.view',
             'invoices.create',
             'invoices.update',
             'invoices.delete',
             'invoices.send_reminder',
-            
+
             // Payment Management
             'payments.view',
             'payments.create',
             'payments.verify',
             'payments.reject',
-            
+
             // Maintenance Ticket Management
             'tickets.view',
             'tickets.create',
             'tickets.assign',
             'tickets.update',
             'tickets.close',
-            
+
             // Announcement Management
             'announcements.view',
             'announcements.create',
             'announcements.update',
             'announcements.delete',
-            
+
             // Review Management
             'reviews.view',
             'reviews.create',
             'reviews.reply',
             'reviews.moderate',
-            
+
             // Voucher Management
             'vouchers.view',
             'vouchers.create',
             'vouchers.update',
             'vouchers.delete',
-            
+
             // Report & Analytics
             'reports.view',
             'reports.export',
             'analytics.view',
-            
+
             // Settings
             'settings.view',
             'settings.update',
@@ -120,63 +120,63 @@ class RolesAndPermissionsSeeder extends Seeder
             'properties.update',
             'properties.delete',
             'properties.publish',
-            
+
             // Rooms
             'rooms.view',
             'rooms.create',
             'rooms.update',
             'rooms.delete',
             'rooms.change_status',
-            
+
             // Tenants
             'tenants.view',
             'tenants.create',
             'tenants.update',
             'tenants.delete',
             'tenants.verify',
-            
+
             // Bookings
             'bookings.view',
             'bookings.create',
             'bookings.confirm',
             'bookings.cancel',
-            
+
             // Contracts
             'contracts.view',
             'contracts.create',
             'contracts.update',
             'contracts.terminate',
             'contracts.extend',
-            
+
             // Invoices
             'invoices.view',
             'invoices.create',
             'invoices.update',
             'invoices.send_reminder',
-            
+
             // Payments
             'payments.view',
             'payments.create',
             'payments.verify',
             'payments.reject',
-            
+
             // Maintenance
             'tickets.view',
             'tickets.assign',
             'tickets.update',
             'tickets.close',
-            
+
             // Announcements
             'announcements.view',
             'announcements.create',
             'announcements.update',
             'announcements.delete',
-            
+
             // Reviews
             'reviews.view',
             'reviews.reply',
             'reviews.moderate',
-            
+
             // Reports
             'reports.view',
             'reports.export',
@@ -190,18 +190,18 @@ class RolesAndPermissionsSeeder extends Seeder
             'tenants.view',
             'bookings.view',
             'contracts.view',
-            
+
             // Invoices & Payments
             'invoices.view',
             'invoices.update',
             'payments.view',
             'payments.create',
-            
+
             // Maintenance tickets - can handle
             'tickets.view',
             'tickets.update',
             'tickets.close',
-            
+
             // Announcements - view only
             'announcements.view',
         ]);

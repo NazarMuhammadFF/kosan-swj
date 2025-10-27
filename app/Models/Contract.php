@@ -99,8 +99,8 @@ class Contract extends Model
      */
     public function isActive()
     {
-        return $this->status === 'active' 
-            && $this->start_date <= now() 
+        return $this->status === 'active'
+            && $this->start_date <= now()
             && $this->end_date >= now();
     }
 

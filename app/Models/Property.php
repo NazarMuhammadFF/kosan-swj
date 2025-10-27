@@ -293,13 +293,13 @@ class Property extends Model
     public function getOccupancyRate()
     {
         $totalRooms = $this->rooms()->count();
-        
+
         if ($totalRooms === 0) {
             return 0;
         }
 
         $occupiedRooms = $this->rooms()->where('status', 'occupied')->count();
-        
+
         return round(($occupiedRooms / $totalRooms) * 100, 2);
     }
 
