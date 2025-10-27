@@ -48,6 +48,45 @@ class User extends Authenticatable
     }
 
     use HasRoles;
-    // ...
+
+    /**
+     * Check if user is owner
+     */
+    public function isOwner(): bool
+    {
+        return $this->hasRole('owner');
+    }
+
+    /**
+     * Check if user is admin
+     */
+    public function isAdmin(): bool
+    {
+        return $this->hasRole('admin');
+    }
+
+    /**
+     * Check if user is staff
+     */
+    public function isStaff(): bool
+    {
+        return $this->hasRole('staff');
+    }
+
+    /**
+     * Check if user is tenant
+     */
+    public function isTenant(): bool
+    {
+        return $this->hasRole('tenant');
+    }
+
+    /**
+     * Check if user can access admin panel
+     */
+    public function canAccessAdmin(): bool
+    {
+        return $this->hasAnyRole(['owner', 'admin', 'staff']);
+    }
 
 }
