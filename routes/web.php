@@ -17,8 +17,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::get('/', fn() => redirect('/rooms'));
-    Route::resource('rooms', RoomController::class)->only(['index', 'show'])->middleware('auth');
 
     // Property Management Routes (Admin & Owner only)
     Route::middleware('admin')->group(function () {
@@ -27,6 +25,11 @@ Route::middleware('auth')->group(function () {
             ->name('properties.toggle-publish');
         Route::post('properties/{property}/toggle-featured', [PropertyController::class, 'toggleFeatured'])
             ->name('properties.toggle-featured');
+        
+        // Room Management Routes (Admin & Owner only)
+        Route::resource('rooms', RoomController::class);
+        Route::post('rooms/{room}/change-status', [RoomController::class, 'changeStatus'])
+            ->name('rooms.change-status');
     });
 });
 
