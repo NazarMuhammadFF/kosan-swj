@@ -15,13 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        $this->call(RoomSeeder::class);
-        $this->call(RolesAndPermissionsSeeder::class);
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // Run seeders in order
+        $this->call([
+            RolesAndPermissionsSeeder::class,
+            UserSeeder::class,
+            // RoomSeeder::class, // Uncomment when PropertySeeder is ready
         ]);
     }
 }
