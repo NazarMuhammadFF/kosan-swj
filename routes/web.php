@@ -25,7 +25,7 @@ Route::middleware('auth')->group(function () {
             ->name('properties.toggle-publish');
         Route::post('properties/{property}/toggle-featured', [PropertyController::class, 'toggleFeatured'])
             ->name('properties.toggle-featured');
-        
+
         // Room Management Routes (Admin & Owner only)
         Route::resource('rooms', RoomController::class);
         Route::post('rooms/{room}/change-status', [RoomController::class, 'changeStatus'])

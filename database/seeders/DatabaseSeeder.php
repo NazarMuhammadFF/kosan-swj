@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -19,7 +18,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             RolesAndPermissionsSeeder::class,
             UserSeeder::class,
-            // RoomSeeder::class, // Uncomment when PropertySeeder is ready
+            PropertySeeder::class,
+            // RoomSeeder::class, // TODO: update RoomSeeder to use factories before enabling
         ]);
     }
 }

@@ -23,7 +23,7 @@
                         {{-- Informasi Dasar --}}
                         <div>
                             <h3 class="text-lg font-medium text-gray-900 mb-4">Informasi Dasar</h3>
-                            
+
                             {{-- Nama Property --}}
                             <div class="mb-4">
                                 <label for="name" class="block text-sm font-medium text-gray-700">Nama Property <span class="text-red-500">*</span></label>
@@ -60,7 +60,7 @@
                         {{-- Alamat --}}
                         <div>
                             <h3 class="text-lg font-medium text-gray-900 mb-4">Alamat</h3>
-                            
+
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {{-- Alamat Lengkap --}}
                                 <div class="md:col-span-2">
@@ -120,7 +120,7 @@
                         {{-- Kontak --}}
                         <div>
                             <h3 class="text-lg font-medium text-gray-900 mb-4">Kontak</h3>
-                            
+
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <label for="phone" class="block text-sm font-medium text-gray-700">Nomor Telepon <span class="text-red-500">*</span></label>

@@ -130,12 +130,12 @@ class RoomController extends Controller
         // Handle new photo uploads
         if ($request->hasFile('new_photos')) {
             $existingPhotos = $room->photos ?? [];
-            
+
             foreach ($request->file('new_photos') as $photo) {
                 $path = $photo->store('rooms', 'public');
                 $existingPhotos[] = $path;
             }
-            
+
             $validated['photos'] = $existingPhotos;
         }
 
@@ -149,11 +149,11 @@ class RoomController extends Controller
                 if (Storage::disk('public')->exists($photoPath)) {
                     Storage::disk('public')->delete($photoPath);
                 }
-                
+
                 // Remove from array
                 $existingPhotos = array_values(array_diff($existingPhotos, [$photoPath]));
             }
-            
+
             $validated['photos'] = $existingPhotos;
         }
 
